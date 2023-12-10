@@ -2,39 +2,32 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>LINK 文化祭Tシャツ　２次受け付け</title>
-  <link rel="icon" href="icon2023.ico">
+  <title>文化祭Tシャツ　Web受け付け</title>
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="./new.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="./new.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
   <style>
     .slide img {
       width: 100%;
     }
   </style>
- <meta http-equiv="refresh" content="0;URL=https://ngfes.com/reserve-finish">
-</head>
 
 <body>
   <div class="form-wrapper">
-    <h1>LINK 文化祭Tシャツ<p><br>２次受け付け</h1>
+    <h1>文化祭Tシャツ<p><br>Web受け付け</h1>
 
     <!-- 予約フォームのコード -->
     <form action="confirm.php" method="POST">
       <div class="form-item">
-        <label for="name">名前</label>
-        <input type="text" name="name" required="required" value="<?php echo htmlspecialchars($name); ?>" placeholder="奈良学太郎">
-      </div>
-      <div class="form-item">
-        <label for="name-kana">名前（ひらがな）</label>
-        <input type="text" name="name-kana" pattern="(?=.*?[\u3041-\u309F])[\u3041-\u309F]*" required="required" placeholder="ならがくたろう">
-      </div>
-      <div class="form-item">
         <label for="student-number">学籍番号</label>
         <input type="number" name="student-number" min="111111" max="999999" oninput="javascript: this.value = this.value.slice(0,6);" required="required" placeholder="数字6桁　靴箱の番号と同じです">
+      </div>
+      <div class="form-item">
+        <label for="email">メールアドレス</label>
+        <input type="email" name="email" required="required" placeholder="example@gmail.com">
       </div>
 
       <div class="form-item">
@@ -70,42 +63,53 @@
   <div class="slide-items__wrap">
     <ul class="slide-items">
       <li class="slide-items__item">
-        <img src="image1_1.jpg" alt="" title="ホワイト">
+        <img src="image1_1.jpg" alt=ホワイト×グリーン　前面">
+        <p>ホワイト×グリーン　前面</p>
       </li>
       <li class="slide-items__item">
-        <img src="image1_2.jpg" alt="">
+        <img src="image1_2.jpg" alt="ホワイト×グリーン　背面">
+        <p>ホワイト×グリーン　背面</p>
       </li>
       <li class="slide-items__item">
-        <img src="image2_1.jpg" alt="">
+        <img src="image2_1.jpg" alt="ベビーピンク×ホットピンク　前面">
+        <p>ベビーピンク×ホットピンク　前面</p>
       </li>
       <li class="slide-items__item">
-        <img src="image2_2.jpg" alt="">
+        <img src="image2_2.jpg" alt="ベビーピンク×ホットピンク　背面">
+        <p>ベビーピンク×ホットピンク　背面</p>
       </li>
       <li class="slide-items__item">
-        <img src="image3_1.jpg" alt="">
+        <img src="image3_1.jpg" alt="ライトブルー×バイオレット　前面">
+        <p>ライトブルー×バイオレット　前面</p>
       </li>
       <li class="slide-items__item">
-        <img src="image3_2.jpg" alt="">
+        <img src="image3_2.jpg" alt="ライトブルー×バイオレット　背面">
+        <p>ライトブルー×バイオレット　背面</p>
       </li>
       <li class="slide-items__item">
-        <img src="image4_1.jpg" alt="">
+        <img src="image4_1.jpg" alt="ロイヤルブルー×イエロー　前面">
+        <p>ロイヤルブルー×イエロー　前面</p>
       </li>
       <li class="slide-items__item">
-        <img src="image4_2.jpg" alt="">
+        <img src="image4_2.jpg" alt="ロイヤルブルー×イエロー　背面">
+        <p>ロイヤルブルー×イエロー　背面</p>
       </li>
       <li class="slide-items__item">
-        <img src="image5_1.jpg" alt="">
+        <img src="image5_1.jpg" alt="ブラック×ホットピンク　前面">
+        <p>ブラック×ホットピンク　前面</p>
       </li>
       <li class="slide-items__item">
-        <img src="image5_2.jpg" alt="">
+        <img src="image5_2.jpg" alt="ブラック×ホットピンク　背面">
+        <p>ブラック×ホットピンク　背面</p>
       </li>
     </ul>
   </div>
   <script>
 $(document).ready(function () {
   $('.slide-items').bxSlider();
-  captions: true;
+  captions: true
 });
+
   </script>
 </div>
 
@@ -117,7 +121,8 @@ $(document).ready(function () {
     </div>
   </form>
   <div class="form-footer">
-    <p>&copy; 2023 奈良学園中学校・高等学校 文化祭実行委員会</p>
+    <p><a href="./search.php">予約内容の確認・変更はこちらから</a></p><br><p></p>
+    <p>&copy; 奈良学園中学校・高等学校 文化祭実行委員会</p>
   </div>
     
     <!-- 予約フォームのコード -->
@@ -215,6 +220,12 @@ $(document).ready(function () {
       image.src = '';
     }
   }
+</script>
+
+<script>
+$('.bxslider').bxSlider({
+    captions:true
+});
 </script>
 
 </body>
