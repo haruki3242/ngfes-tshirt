@@ -28,14 +28,8 @@ $stmt->execute();
 // 結果を取得する
 $result = $stmt->get_result();
 
-//ここ要注意です
-$colorNames = array(
-    'a' => 'ホワイト',
-    'b' => 'ベビーピンク',
-    'c' => 'ライトブルー',
-    'd' => 'ロイヤルブルー',
-    'e' => 'ブラック'
-);
+//カラーコードとカラー名の対応を読み込む
+require_once 'colorMapping.php';
 
 // POSTリクエストの処理
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -83,13 +77,15 @@ $conn->close();
   <meta charset="utf-8">
   <title>確認ページ</title>
   <meta name="viewport" content="width=device-width">
-  <link rel="icon" href="icon2023.ico">
   <link rel="stylesheet" href="./new.css">
   <link rel="stylesheet" href="./confirm.css">
   <style>
     .text {
       font-size: 18px;
     }
+.warning {
+font-size: 20px;
+}
   </style>
 
   <!-- Google tag (gtag.js) -->
@@ -100,13 +96,19 @@ $conn->close();
     gtag('js', new Date());
 
     gtag('config', 'G-53HN6Y2T88');
+
+    // ブラウザのバックボタンを押した際に実行
+history.pushState(null, null, location.href);
+window.addEventListener('popstate', (e) => {
+  history.go(1);
+});
   </script>
 
 </head>
 <body>
 <div class="form-wrapper">
   <h1>確認ページ</h1>
-  <br><h2>内容を確認してください</h2><br>
+  <p class="warning"><strong>内容を確認してください</strong></p><br>
 
     <label class="confirm-item">名前</label><br><p>
         <div class="text"><?php echo htmlspecialchars($_SESSION['name']); ?></div>
@@ -125,9 +127,9 @@ $conn->close();
   <br>
 
       <label class="confirm-item">カラー・枚数</label>
-      <div class="text">合計:<?php echo htmlspecialchars($_SESSION['count']); ?>枚
+      <div class="text">合計：<?php echo htmlspecialchars($_SESSION['count']); ?>枚
     <?php for ($i = 1; $i <= $_SESSION['count']; $i++): ?>
-      <p><?php echo $i; ?>枚目のカラー： <?php echo $colorNames[$colors[$i]]; ?></p>
+      <p><?php echo $i; ?>枚目のカラー： <?php echo $colorMapping[$colors[$i]]; ?></p>
     <?php endfor; ?>
       </div>
   <!-- その他の表示したい情報 -->
@@ -136,12 +138,12 @@ $conn->close();
   <form action="complete.php" method="POST">
     <!-- 必要なフォームの追加 -->
     <input type="hidden" name="token" value="<?php echo $token;?>">
-    <input type="submit" class="button" id="submit-button" value="この内容で予約する"> <p> <br>
-</form>
+    <input type="submit" class="button" id="submit-button" value="この内容で予約する"> <p>
 </div>
+</form>
   <div class="form-footer">
-<p><a href="">名前が違う・表示されない場合はこちら</a></p><br><p></p>
-    <p>&copy; 2023 奈良学園中学校・高等学校 文化祭実行委員会</p>
+<p><a href="./request.php?type=name" target="_blank" rel="noopener noreferrer">名前が違う・表示されない場合はこちら</a></p><br><p></p>
+    <p>&copy; 奈良学園中学校・高等学校 文化祭実行委員会</p>
   </div>
 </div>
 </body>
