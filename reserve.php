@@ -63,7 +63,7 @@
   <div class="slide-items__wrap">
     <ul class="slide-items">
       <li class="slide-items__item">
-        <img src="image1_1.jpg" alt=ホワイト×グリーン　前面">
+        <img src="image1_1.jpg" alt="ホワイト×グリーン　前面">
         <p>ホワイト×グリーン　前面</p>
       </li>
       <li class="slide-items__item">
