@@ -5,8 +5,8 @@
   <title>文化祭Tシャツ　Web受け付け</title>
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-<link rel="stylesheet" href="./new.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link rel="stylesheet" href="./new.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <style>
@@ -18,7 +18,6 @@
 <body>
   <div class="form-wrapper">
     <h1>文化祭Tシャツ<p><br>Web受け付け</h1>
-
     <!-- 予約フォームのコード -->
     <form action="confirm.php" method="POST">
       <div class="form-item">
