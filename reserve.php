@@ -201,25 +201,7 @@ $(document).ready(function () {
       }
     }
   }
-
-  function updateSampleImage(select) {
-    var index = select.name.slice(-1);
-    var image = document.getElementById('sample-image' + index);
-
-    if (select.value === 'a') {
-      image.src = 'image1_1.jpg';
-    } else if (select.value === 'b') {
-      image.src = 'image2_1.jpg';
-    } else if (select.value === 'c') {
-      image.src = 'image3_1.jpg';
-    } else if (select.value === 'd') {
-      image.src = 'image4_1.jpg';
-    } else if (select.value === 'e') {
-      image.src = 'image5_1.jpg';
-    } else {
-      image.src = '';
-    }
-  }
+  
 </script>
 
 <script>
