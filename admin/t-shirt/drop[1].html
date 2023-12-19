@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name=”viewport” content=”width=device-width,initial-scale=1.0″>
+    <title>データを初期化する｜管理者メニュー</title>
+    <script type="text/javascript">
+        function confirmDelete() {
+            var password = prompt("削除を実行するにはパスワードを入力してください:");
+            if (password != null && password !== "") {
+                // パスワードが入力された場合、確認用のフォームにリダイレクトする
+                window.location.href = "drop_tables.php?password=" + password;
+            } else {
+                alert("パスワードが入力されていません。");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="confirmDelete()">データを初期化する</button>
+</body>
+</html>
