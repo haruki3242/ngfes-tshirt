@@ -1,0 +1,40 @@
+<?php
+//session_start();
+
+// ログイン状態の確認
+//if (!isset($_SESSION['user_id'])) {
+  // ログインしていない場合はログインページにリダイレクト
+  //header('Location: notlogin.html');
+  //exit();
+//}
+?>
+<!doctype html>
+<html>
+<head>
+<title>Tシャツ管理｜管理者メニュー</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="form-wrapper">
+  <h1>Tシャツ管理</h1>
+  <form>
+    <div class="button-panel">
+      <a href="./inquiry.php" target="_blank" rel="noopener" >予約照会</a>
+    </div>
+    <div class="button-panel">
+      <a href="./aggregate.php" target="_blank" rel="noopener" >集計</a>
+    </div>
+    <div class="button-panel">
+      <a href="./drop.html" target="_blank" rel="noopener">データの初期化</a>
+    </div>
+    <div class="button-panel">
+      <a href="./access.php" target="_blank" rel="noopener">reserve.php へのアクセス制限</a>
+    </div>
+  </form>
+  <div class="form-footer">
+    <p><a href="https://yatapyon.xsrv.jp/wiki/?NG%E7%A5%AD/%E9%81%8B%E5%96%B6/T%E3%82%B7%E3%83%A3%E3%83%84%E7%8F%AD/%E6%96%87%E5%8C%96%E7%A5%ADT%E3%82%B7%E3%83%A3%E3%83%84%E3%81%AEWeb%E5%8F%97%E4%BB%98%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" target="_blank" rel="noopener" >ヘルプ</a></p>
+  </div>
+</div>
+</body>
+</html>
