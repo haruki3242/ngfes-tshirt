@@ -4,9 +4,6 @@ https://ngfes.com/t-shirt/reserve
 
 https://ngfes.com/admin/t-shirt
 # 課題
-## PHPMailerの導入  
-迷惑メールに入るんじゃい  
-文字化けるしな！  
 ## admin
 締め切りに影響されない ~~予約の受付・~~ キャンセルシステムの用意  
 変更もできるように（メールアドレスとかの訂正）
